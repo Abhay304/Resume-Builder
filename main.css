@@ -2,7 +2,7 @@ html{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	scroll-behavior: smooth;
+	/*scroll-behavior: smooth;*/
 }
 
 
@@ -136,6 +136,11 @@ section{
 .btn-custom{
 	box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
 	color: #ab2b2b;
+	cursor: pointer !important;
+}
+
+.btn-custom:focus, .btn-custom:active{
+	outline: none !important;
 }
 
 /*Media Query*/
@@ -151,7 +156,7 @@ section{
 
 	.mbnav{
 		display: block;
-		color: #fff;
+		color: black;
 		cursor: pointer;
 	}
 	.mbnav span{
