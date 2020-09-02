@@ -6,8 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Resume Builder</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -28,6 +26,7 @@
 						<li><a href="#wrkHistory" title="Work History">Work History</a></li>
 						<li><a href="#skills" title="Skills">Skills</a></li>
 						<li><a href="#education" title="Education">Education</a></li>
+						<li><a href="#projects" title="Projects">Projects</a></li>
 						<li><a href="#other" title="Other">Other</a></li>
 					</ul>
 				</div>
@@ -96,7 +95,6 @@
 		<div class="container-fluid">
 
 			<div class="row">
-
 				<div class="form-group col-md-3 col-sm-3">
 					<label>Job Title</label>
 					<input type="text" class="form-control" id="">
@@ -115,36 +113,36 @@
 					</div>
 
 				</div>
-			</div>
 
-			<div class="row">
 				<div class="form-group col-md-6 col-sm-6">
 					<label>Current Company Job Title</label>
 					<input type="text" class="form-control" id="">
 				</div>
-			</div>
 
-			<div class="row">
 				<div class="form-group col-md-6 col-sm-6">
 					<textarea class="form-control" placeholder="Enter your Role..." rows="4"></textarea>
 				</div>
 			</div>
-
 		</div>
-
 	</section>
 
 
-	<section class="container" id="#skills">
+	<section class="container" id="skills">
 		<h2 class="tab-heading">SKILLS</h2>
 		<div class="container-fluid">
-			<div class="row">
-				<div class="form-group col-md-2 col-sm-2">
-					<label>Skills</label>
-					<input type="text" class="form-control" id="">
-				</div>
+			<div class="row" style="margin-bottom: 15px;">
+				<button class="btn btn-custom" type="button"  onclick="addElm('skill-div')">Add new skill</button>
 			</div>
 
+			<div class="row skill-div">
+				<div class="skill1">
+					<div class="form-group col-md-2 col-sm-2">
+						<label>Skills 1</label>
+						<input type="text" class="form-control" id="">
+					</div>
+				</div>
+
+			</div>
 		</div>
 
 	</section>
@@ -153,58 +151,123 @@
 	<section class="container" id="education">
 		<h2 class="tab-heading">EDUCATION</h2>
 		<div class="container-fluid">
+			<ol>
+				<li>
+					<div class="row">
+						<div class="form-group col-md-4 col-sm-4">
+							<label>School Name /College Name</label>
+							<input type="text" class="form-control" id="">
+						</div>
 
-			<div class="row">
-				<div class="form-group col-md-4 col-sm-4">
-					<label>School Name /College Name</label>
-					<input type="text" class="form-control" id="">
-				</div>
+						<div class="form-group col-md-4 col-sm-4">
+							<label>Degree</label>
+							<input type="text" class="form-control" id="">
+						</div>
 
-				<div class="form-group col-md-4 col-sm-4">
-					<label>Degree</label>
-					<input type="text" class="form-control" id="">
-				</div>
+						<div class="form-group col-md-4 col-sm-4">
+							<label>Field of Study</label>
+							<input type="text" class="form-control" id="">
+						</div>
 
-				<div class="form-group col-md-4 col-sm-4">
-					<label>Field of Study</label>
-					<input type="text" class="form-control" id="">
-				</div>
+						<div class="form-group col-md-2 col-sm-2">
+							<label>Start Year / End Year</label>
+							<div style="display: inline-flex;">
+								<input type="number" class="form-control input-group-addon" id="" placeholder="Start">
+								<input type="number " class="form-control input-group-addon" id="" placeholder="End">
+							</div>
+						</div>
 
+					</div>
+				</li>
+				<li>
+					<div class="row">
+						<div class="form-group col-md-4 col-sm-4">
+							<label>School Name /College Name</label>
+							<input type="text" class="form-control" id="">
+						</div>
+
+						<div class="form-group col-md-4 col-sm-4">
+							<label>Degree</label>
+							<input type="text" class="form-control" id="">
+						</div>
+
+						<div class="form-group col-md-4 col-sm-4">
+							<label>Field of Study</label>
+							<input type="text" class="form-control" id="">
+						</div>
+
+						<div class="form-group col-md-2 col-sm-2">
+							<label>Start Year / End Year</label>
+							<div style="display: inline-flex;">
+								<input type="number" class="form-control input-group-addon" id="" placeholder="Start">
+								<input type="number " class="form-control input-group-addon" id="" placeholder="End">
+							</div>
+						</div>
+					</div>
+				</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="container" id='projects'>
+		<h2 class="tab-heading">PROJECTS</h2>
+		<div class="container-fluid">
+			<div class="row" style="margin-bottom: 15px;">
+				<button class="btn btn-custom" type="button" onclick="addElm('project-div')">Add new Project</button>
 			</div>
+			<div class="project-div">
+				<div class="row">
+					<div class="form-group col-md-4 col-sm-4">
+						<label>Prjoect Name</label>
+						<input type="text" class="form-control" id="">
+					</div>
 
-			<div class="row">
-				<div class="col-md-2 col-sm-2">
-					<label>Start Year / End Year</label>
-					<div style="display: inline-flex;">
-						<input type="number" class="form-control input-group-addon" id="" placeholder="Start">
-						<input type="number " class="form-control input-group-addon" id="" placeholder="End">
+					<div class="form-group col-md-6 col-sm-6">
+						<label>Prjoect Url</label>
+						<input type="text" class="form-control" id="">
+					</div>
+
+					<div class="form-group col-md-6 col-sm-6">
+						<label>Project Description</label>
+						<input type="text" class="form-control" id="">
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</section>
+
 
 	<section class="container" id="other">
 		<h2 class="tab-heading">CERTIFICATIONS / TRANNINGS / ACHIEVEMNETS</h2>
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row" style="margin-bottom: 15px;">
+				<button class="btn btn-custom" type="button" onclick="addElm('cert-div')">Add new skill</button>
+			</div>
+
+			<div class="row cert-div">
 				<div class="form-group col-md-6 col-sm-6	">
-					<label id="">1st Point</label>
+					<label id="">1</label>
 					<input type="text" class="form-control" id="">
 				</div>
 			</div>
 
 		</div>
-
 	</section>
 
 
-	<section class="container" id="#" style="margin-bottom: 5rem;">
+	<section class="container" style="margin-bottom: 5rem;">
 		<div class="row" style="text-align: center;">
 			<button class="btn btn-custom">Submit</button>
 		</div>
 	</section>
 
+	<footer>
+		
+	</footer>
+	<!-- Js Files start -->
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script defer src="loader.js"></script>
+	<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- Js Files end -->
 </body>
 </html>
