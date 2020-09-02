@@ -1,20 +1,3 @@
-$(document).ready(function () {
-	$('.mbnav').on('click', function () {
-		$('.navblock').slideToggle();
-	});
-
-	$('a').on('click', function (event){
-
-		var hash = this.hash; 
-		$('html').animate({
-			scrollTop: $(hash).offset().top
-		},800)
-	});
-
-
-});
-
-
 class BuildResume{
 	construtor(){}
 
@@ -43,3 +26,31 @@ let elem = new BuildResume();
 function addElm(className){
 	elem.add(className);
 }
+
+
+
+
+$(document).ready(function () {
+	$('.mbnav').on('click', function () {
+		$('.navblock').slideToggle();
+	});
+
+	$('a').on('click', function (event){
+
+		var hash = this.hash; 
+		$('html').animate({
+			scrollTop: $(hash).offset().top
+		},800)
+	});
+
+
+});
+
+
+ $('.btnNext').click(function(){
+  $('.nav-tabs > .active').next('li').find('a').trigger('click');
+});
+
+  $('.btnPrevious').click(function(){
+  $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+});
