@@ -91,7 +91,6 @@ section{
 /*Custom input type file*/
 .custom-file-input {
 	color: transparent;
-	width: 10.7%;
 }
 .custom-file-input::-webkit-file-upload-button {
 	visibility: hidden;
