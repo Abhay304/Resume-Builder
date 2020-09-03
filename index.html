@@ -1,263 +1,267 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Resume Builder</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <link rel="stylesheet" href="main.css">
-   </head>
-   <body>
-      <header>
-         <div class="wrapper">
-            <nav class="header-container">
-               <div>
-                  <a href="/" title="Resume Builder">Resume Builder</a>
-               </div>
-               <div class="mbnav">
-                  <span class="line1">____</span>
-                  <span class="line2">____</span>
-                  <span class="line3">____</span>
-               </div>
-               <div class="navblock">
-                  <ul  class="nav nav-tabs">
-                     <li class="active"><a data-toggle="tab" href="#heading" title="Heading">Heading</a></li>
-                     <li><a data-toggle="tab" href="#wrkHistory" title="Work History">Work History</a></li>
-                     <li><a data-toggle="tab" href="#skills" title="Skills">Skills</a></li>
-                     <li><a data-toggle="tab" href="#education" title="Education">Education</a></li>
-                     <li><a data-toggle="tab" href="#projects" title="Projects">Projects</a></li>
-                     <li><a data-toggle="tab" href="#other" title="Other">Other</a></li>
-                  </ul>
-               </div>
-            </nav>
-         </div>
-      </header>
-      <div class="tab-content">
-         <section class="tab-pane active container" id="heading">
-            <h2 class="tab-heading">HEADING DEATILS</h2>
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="form-group col-md-3 col-sm-3">
-                     <label>Name</label>
-                     <input type="text" class="form-control" id="">
-                  </div>
-                  <div class="form-group col-md-3 col-sm-3">
-                     <label>Phone</label>
-                     <input type="number" class="form-control" id="">
-                  </div>
-                  <div class="form-group col-md-3 col-sm-3">
-                     <label>Email Address</label>
-                     <input type="email" class="form-control" id="">
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="form-group col-md-6 col-sm-6">
-                     <label>Current Company Job Title</label>
-                     <input type="text" class="form-control" id="">
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="form-group col-md-3 col-sm-3">
-                     <label>City</label>
-                     <input type="text" class="form-control" id="">
-                  </div>
-                  <div class=" form-group col-md-3 col-sm-3">
-                     <label>State</label>
-                     <input type="number" class="form-control" id="">
-                  </div>
-                  <div class="form-group col-md-3 col-sm-3">
-                     <label>Pin Code</label>
-                     <input type="number" class="form-control" id="">
-                  </div>
-               </div>
-               <div class="">
-                  <input type="file" class="btn custom-file-input ">
-               </div>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Resume Builder</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="main.css">
+</head>
+<body>
+   <header>
+      <div class="wrapper">
+         <nav class="header-container">
+            <div>
+               <a href="/" title="Resume Builder">Resume Builder</a>
             </div>
-            <br>
-            <br>
-            <a class="btn btn-custom btnNext" >Next</a>
-         </section>
-
-
-         <section class="tab-pane container" id="wrkHistory">
-            <h2 class="tab-heading">WORK HISTORY</h2>
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="form-group col-md-3 col-sm-3">
-                     <label>Job Title</label>
-                     <input type="text" class="form-control" id="">
-                  </div>
-                  <div class="form-group col-md-4 col-sm-4">
-                     <label>Employer</label>
-                     <input type="text" class="form-control" id="">
-                  </div>
-                  <div class="input-group col-md-2 col-sm-2">
-                     <label>Start Year / End Year</label>
-                     <div style="display: inline-flex;">
-                        <input type="number" class="form-control input-group-addon" id="" placeholder="Start">
-                        <input type="number " class="form-control input-group-addon" id="" placeholder="End">
-                     </div>
-                  </div>
-                  <div class="form-group col-md-6 col-sm-6">
-                     <textarea class="form-control" placeholder="Enter your Role..." rows="4"></textarea>
-                  </div>
-               </div>
+            <div class="mbnav">
+               <span class="line1">____</span>
+               <span class="line2">____</span>
+               <span class="line3">____</span>
             </div>
-            <br>
-            <br>
-            <a class="btn btn-custom btnPrevious" >Previous</a>
-            <a class="btn btn-custom btnNext" >Next</a>
-         </section>
-
-
-         <section class="tab-pane container" id="skills">
-            <h2 class="tab-heading">SKILLS</h2>
-            <div class="container-fluid">
-               <div class="row" style="margin-bottom: 15px;">
-                  <button class="btn btn-custom" type="button"  onclick="addElm('skill-div')">Add new skill</button>
-               </div>
-               <div class="row skill-div">
-                  <div class="skill1">
-                     <div class="form-group col-md-2 col-sm-2">
-                        <label>Skills 1</label>
-                        <input type="text" class="form-control" id="">
-                     </div>
-                  </div>
-               </div>
+            <div class="navblock">
+               <ul  class="nav nav-tabs">
+                  <li class="active"><a data-toggle="tab" href="#heading" title="Heading">Heading</a></li>
+                  <li><a data-toggle="tab" href="#wrkHistory" title="Work History">Work History</a></li>
+                  <li><a data-toggle="tab" href="#skills" title="Skills">Skills</a></li>
+                  <li><a data-toggle="tab" href="#education" title="Education">Education</a></li>
+                  <li><a data-toggle="tab" href="#projects" title="Projects">Projects</a></li>
+                  <li><a data-toggle="tab" href="#other" title="Other">Other</a></li>
+               </ul>
             </div>
-            <br>
-            <br>
-            <a class="btn btn-custom btnPrevious" >Previous</a>
-            <a class="btn btn-custom btnNext" >Next</a>
-         </section>
-
-         <section class="tab-pane container" id="education">
-            <h2 class="tab-heading">EDUCATION</h2>
-            <div class="container-fluid">
-               <div class="panel-group">
-                  <div class="panel panel-default">
-                     <div class="panel-heading">
-                        <a data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-plus"></span></a>
-                     </div>
-                     <div id="collapse1" class="panel-collapse collapse">
-                        <div class="row panel-body">
-                           <div class="form-group col-md-4 col-sm-4">
-                              <label>School Name /College Name</label>
-                              <input type="text" class="form-control" id="">
-                           </div>
-                           <div class="form-group col-md-4 col-sm-4">
-                              <label>Degree</label>
-                              <input type="text" class="form-control" id="">
-                           </div>
-                           <div class="form-group col-md-4 col-sm-4">
-                              <label>Field of Study</label>
-                              <input type="text" class="form-control" id="">
-                           </div>
-                           <div class="form-group col-md-2 col-sm-2">
-                              <label>Start Year / End Year</label>
-                              <div style="display: inline-flex;">
-                              <input type="number" class="form-control input-group-addon" id="" placeholder="Start">
-                              <input type="number " class="form-control input-group-addon" id="" placeholder="End">
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="panel-group">
-                  <div class="panel panel-default">
-                     <div class="panel-heading">
-                        <a data-toggle="collapse" href="#collapse2"><span class="glyphicon glyphicon-plus"></span></a>
-                     </div>
-                     <div id="collapse2" class="panel-collapse collapse">
-                        <div class="row panel-body">
-                           <div class="form-group col-md-4 col-sm-4">
-                              <label>School Name /College Name</label>
-                              <input type="text" class="form-control" id="">
-                           </div>
-                           <div class="form-group col-md-4 col-sm-4">
-                              <label>Degree</label>
-                              <input type="text" class="form-control" id="">
-                           </div>
-                           <div class="form-group col-md-4 col-sm-4">
-                              <label>Field of Study</label>
-                              <input type="text" class="form-control" id="">
-                           </div>
-                           <div class="form-group col-md-2 col-sm-2">
-                              <label>Start Year / End Year</label>
-                              <div style="display: inline-flex;">
-                              <input type="number" class="form-control input-group-addon" id="" placeholder="Start">
-                              <input type="number " class="form-control input-group-addon" id="" placeholder="End">
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <br>
-            <br>
-            <a class="btn btn-custom btnPrevious" >Previous</a>
-            <a class="btn btn-custom btnNext" >Next</a>
-         </section>
-
-         <section class="tab-pane container" id='projects'>
-            <h2 class="tab-heading">PROJECTS</h2>
-            <div class="container-fluid">
-               <div class="row" style="margin-bottom: 15px;">
-                  <button class="btn btn-custom" type="button" onclick="addElm('project-div')">Add new Project</button>
-               </div>
-               <div class="project-div">
-                  <div class="row">
-                     <div class="form-group col-md-4 col-sm-4">
-                        <label>Prjoect Name</label>
-                        <input type="text" class="form-control" id="">
-                     </div>
-                     <div class="form-group col-md-6 col-sm-6">
-                        <label>Prjoect Url</label>
-                        <input type="text" class="form-control" id="">
-                     </div>
-                     <div class="form-group col-md-6 col-sm-6">
-                        <label>Project Description</label>
-                        <input type="text" class="form-control" id="">
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <br>
-            <br>
-            <a class="btn btn-custom btnPrevious" >Previous</a>
-            <a class="btn btn-custom btnNext" >Next</a>
-         </section>
-
-         <section class="tab-pane container" id="other">
-            <h2 class="tab-heading">CERTIFICATIONS / TRANNINGS / ACHIEVEMENTS</h2>
-            <div class="container-fluid">
-               <div class="row" style="margin-bottom: 15px;">
-                  <button class="btn btn-custom" type="button" onclick="addElm('cert-div')">Add new skill</button>
-               </div>
-               <div class="row cert-div">
-                  <div class="form-group col-md-6 col-sm-6	">
-                     <label id="">1</label>
-                     <input type="text" class="form-control" id="">
-                  </div>
-               </div>
-            </div>
-            <div class="row" style="text-align: center;margin-bottom: 10px;">
-               <button class="btn btn-custom">Submit</button>
-            </div>
-         </section>
+         </nav>
       </div>
+   </header>
+   <div class="tab-content">
+      <section class="tab-pane active container" id="heading">
+         <h2 class="tab-heading">HEADING DEATILS</h2>
+         <div class="container-fluid">
+            <div class="row">
+               <div class="form-group col-md-3 col-sm-3">
+                  <label>Name</label>
+                  <input type="text" class="form-control" id="">
+               </div>
+               <div class="form-group col-md-3 col-sm-3">
+                  <label>Phone</label>
+                  <input type="number" class="form-control" id="">
+               </div>
+               <div class="form-group col-md-3 col-sm-3">
+                  <label>Email Address</label>
+                  <input type="email" class="form-control" id="">
+               </div>
+            </div>
+            <div class="row">
+               <div class="form-group col-md-6 col-sm-6">
+                  <label>Current Company Job Title</label>
+                  <input type="text" class="form-control" id="">
+               </div>
+            </div>
+            <div class="row">
+               <div class="form-group col-md-3 col-sm-3">
+                  <label>City</label>
+                  <input type="text" class="form-control" id="">
+               </div>
+               <div class=" form-group col-md-3 col-sm-3">
+                  <label>State</label>
+                  <input type="number" class="form-control" id="">
+               </div>
+               <div class="form-group col-md-3 col-sm-3">
+                  <label>Pin Code</label>
+                  <input type="number" class="form-control" id="">
+               </div>
+            </div>
+            <div class="">
+                <label  for="upload" class="btn custom-file-input">Browse</label>
+               <input id="upload" type="file" name="photo" style="display: none;">
+            </div>
+         </div>
+         <br>
+         <br>
 
-      <footer>
-      </footer>
+         <a class="btn btn-custom btnNext" >Next</a>
+      </section>
 
-      <!-- Js Files start -->
-      <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <script defer src="loader.js"></script>
-      <!-- Js Files end -->
-   </body>
+
+      <section class="tab-pane container" id="wrkHistory">
+         <h2 class="tab-heading">WORK HISTORY</h2>
+         <div class="container-fluid">
+            <div class="row">
+               <div class="form-group col-md-3 col-sm-3">
+                  <label>Job Title</label>
+                  <input type="text" class="form-control" id="">
+               </div>
+               <div class="form-group col-md-4 col-sm-4">
+                  <label>Employer</label>
+                  <input type="text" class="form-control" id="">
+               </div>
+               <div class="input-group col-md-2 col-sm-2">
+                  <label>Start Year / End Year</label>
+                  <div style="display: inline-flex;">
+                     <input type="number" class="form-control input-group-addon" id="" placeholder="Start">
+                     <input type="number " class="form-control input-group-addon" id="" placeholder="End">
+                  </div>
+               </div>
+               <div class="form-group col-md-6 col-sm-6">
+                  <textarea class="form-control" placeholder="Enter your Role..." rows="4"></textarea>
+               </div>
+            </div>
+         </div>
+         <br>
+         <br>
+         <a class="btn btn-custom btnPrevious" >Previous</a>
+         <a class="btn btn-custom btnNext" >Next</a>
+      </section>
+
+
+      <section class="tab-pane container" id="skills">
+         <h2 class="tab-heading">SKILLS</h2>
+         <div class="container-fluid">
+            <div class="row" style="margin-bottom: 15px;">
+               <button class="btn btn-custom" type="button"  onclick="addElm('skill-div')">Add new skill</button>
+            </div>
+
+            <div class="row skill-div" id="skillDiv">
+
+               <div class="form-group col-md-3 col-sm-3" id="skill1">
+                  <label>Skills 1</label>
+                  <input type='text' class='form-control' id=''>
+               </div>
+
+            </div>
+
+         </div>
+         <br>
+         <br>
+         <a class="btn btn-custom btnPrevious" >Previous</a>
+         <a class="btn btn-custom btnNext" >Next</a>
+      </section>
+
+      <section class="tab-pane container" id="education">
+         <h2 class="tab-heading">EDUCATION</h2>
+         <div class="container-fluid">
+            <div class="panel-group">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <a data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-plus"> SECTION 1</span></a>
+                  </div>
+                  <div id="collapse1" class="panel-collapse collapse">
+                     <div class="row panel-body">
+                        <div class="form-group col-md-4 col-sm-4">
+                           <label>School Name /College Name</label>
+                           <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="form-group col-md-4 col-sm-4">
+                           <label>Degree</label>
+                           <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="form-group col-md-4 col-sm-4">
+                           <label>Field of Study</label>
+                           <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="form-group col-md-2 col-sm-2">
+                           <label>Start Year / End Year</label>
+                           <div style="display: inline-flex;">
+                              <input type="number" class="form-control input-group-addon" id="" placeholder="Start">
+                              <input type="number " class="form-control input-group-addon" id="" placeholder="End">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="panel-group">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <a data-toggle="collapse" href="#collapse2"><span class="glyphicon glyphicon-plus"> SECTION 2</span></a>
+                  </div>
+                  <div id="collapse2" class="panel-collapse collapse">
+                     <div class="row panel-body">
+                        <div class="form-group col-md-4 col-sm-4">
+                           <label>School Name /College Name</label>
+                           <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="form-group col-md-4 col-sm-4">
+                           <label>Degree</label>
+                           <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="form-group col-md-4 col-sm-4">
+                           <label>Field of Study</label>
+                           <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="form-group col-md-2 col-sm-2">
+                           <label>Start Year / End Year</label>
+                           <div style="display: inline-flex;">
+                              <input type="number" class="form-control input-group-addon" id="" placeholder="Start">
+                              <input type="number " class="form-control input-group-addon" id="" placeholder="End">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br>
+         <br>
+         <a class="btn btn-custom btnPrevious" >Previous</a>
+         <a class="btn btn-custom btnNext" >Next</a>
+      </section>
+
+      <section class="tab-pane container" id='projects'>
+         <h2 class="tab-heading">PROJECTS</h2>
+         <div class="container-fluid">
+            <div class="row" style="margin-bottom: 15px;">
+               <button class="btn btn-custom" type="button" onclick="addElm('project-div')">Add new Project</button>
+            </div>
+            <div class="project-div">
+               <div class="row">
+                  <div class="form-group col-md-4 col-sm-4">
+                     <label>Prjoect Name</label>
+                     <input type="text" class="form-control" id="">
+                  </div>
+                  <div class="form-group col-md-6 col-sm-6">
+                     <label>Prjoect Url</label>
+                     <input type="text" class="form-control" id="">
+                  </div>
+                  <div class="form-group col-md-6 col-sm-6">
+                     <label>Project Description</label>
+                     <input type="text" class="form-control" id="">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br>
+         <br>
+         <a class="btn btn-custom btnPrevious" >Previous</a>
+         <a class="btn btn-custom btnNext" >Next</a>
+      </section>
+
+      <section class="tab-pane container" id="other">
+         <h2 class="tab-heading">CERTIFICATIONS / TRANNINGS / ACHIEVEMENTS</h2>
+         <div class="container-fluid">
+            <div class="row" style="margin-bottom: 15px;">
+               <button class="btn btn-custom" type="button" onclick="addElm('cert-div')">Add new skill</button>
+            </div>
+            <div class="row cert-div">
+               <div class="form-group col-md-6 col-sm-6	">
+                  <label id="">1</label>
+                  <input type="text" class="form-control" id="">
+               </div>
+            </div>
+         </div>
+         <div class="row" style="text-align: center;margin-bottom: 10px;">
+            <button class="btn btn-custom">Submit</button>
+         </div>
+      </section>
+   </div>
+
+   <footer>
+   </footer>
+
+   <!-- Js Files start -->
+   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <script defer src="loader.js"></script>
+   <!-- Js Files end -->
+</body>
 </html>
