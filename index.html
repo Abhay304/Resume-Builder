@@ -11,7 +11,7 @@
    <header>
       <div class="wrapper">
          <nav class="header-container">
-            <div>
+            <div class="logoblock">
                <a title="Resume Builder">Resume Builder</a>
             </div>
             <div class="mbnav">
@@ -39,32 +39,32 @@
             <div class="row">
                <div class="form-group col-md-3 col-sm-12">
                   <label>Name</label>
-                  <input type="text" class="form-control" id="">
+                  <input type="text" class="form-control" id="txtName">
                </div>
                <div class="form-group col-md-2 col-sm-12">
                   <label>Phone</label>
-                  <input type="number" class="form-control" id="">
+                  <input type="number" class="form-control" id="txtNumber">
                </div>
                <div class="form-group col-md-3 col-sm-12">
                   <label>Email Address</label>
-                  <input type="email" class="form-control" id="">
+                  <input type="email" class="form-control" id="txtEmail">
                </div>
                <div class="form-group col-md-4 col-sm-12">
                   <label>Linkdien Profile</label>
-                  <input type="text" class="form-control" id="">
+                  <input type="text" class="form-control" id="txtLProfile">
                </div>
 
             </div>
             <div class="row">
                <div class="form-group col-md-6 col-sm-12">
                   <label>Current Company Job Title</label>
-                  <input type="text" class="form-control" id="">
+                  <input type="text" class="form-control" id="txtJobTitle">
                </div>
             </div>
             <div class="row">
                <div class="form-group col-md-4 col-sm-12">
                   <label>State / City / Pincode</label>
-                  <input type="text" class="form-control" id="">
+                  <input type="text" class="form-control" id="txtAddress">
                </div>
 
             </div>
@@ -75,7 +75,7 @@
        </div>
        <br>
        <br>
-       <a class="btn btn-custom btnNext" >Next</a>
+       <a class="btn btn-custom btnNext" onclick="SaveData()">Next</a>
     </section>
 
 
@@ -91,21 +91,21 @@
                   <div class="row panel-body">
                      <div class="form-group col-md-3 col-sm-12">
                         <label>Job Title</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" id="txtJobTitle1">
                      </div>
                      <div class="form-group col-md-4 col-sm-12">
                         <label>Employer</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" id="txtEmployer1">
                      </div>
                      <div class="form-group col-md-2 col-sm-2">
                         <label>Start Year / End Year</label>
                         <div style="display: inline-flex;">
-                           <input type="number" class="form-control input-group-addon" id="" placeholder="Start">
-                           <input type="number " class="form-control input-group-addon" id="" placeholder="End">
+                           <input type="number" class="form-control input-group-addon" id="txtstartDate1" placeholder="Start">
+                           <input type="number " class="form-control input-group-addon" id="txtEndDate1" placeholder="End">
                         </div>
                      </div>
                      <div class="form-group col-md-6 col-sm-12">
-                        <textarea class="form-control" placeholder="Enter your Role..." rows="4"></textarea>
+                        <textarea class="form-control" placeholder="Enter your Role..." rows="4" id="txtRole1"></textarea>
                      </div>
                   </div>
                </div>
@@ -119,23 +119,28 @@
                </div>
                <div id="workHistory2" class="panel-collapse collapse">
                   <div class="row panel-body">
-                     <div class="form-group col-md-4 col-sm-4">
-                        <label>Prjoect Name</label>
-                        <input type="text" class="form-control" id="">
+                  <div class="form-group col-md-3 col-sm-12">
+                        <label>Job Title</label>
+                        <input type="text" class="form-control" id="txtJobTitle2">
                      </div>
-                     <div class="form-group col-md-6 col-sm-6">
-                        <label>Prjoect Url</label>
-                        <input type="text" class="form-control" id="">
+                     <div class="form-group col-md-4 col-sm-12">
+                        <label>Employer</label>
+                        <input type="text" class="form-control" id="txtEmployer2">
                      </div>
-                     <div class="form-group col-md-6 col-sm-6">
-                        <label>Project Description</label>
-                        <input type="text" class="form-control" id="">
+                     <div class="form-group col-md-2 col-sm-2">
+                        <label>Start Year / End Year</label>
+                        <div style="display: inline-flex;">
+                           <input type="number" class="form-control input-group-addon" id="txtstartDate2" placeholder="Start">
+                           <input type="number " class="form-control input-group-addon" id="txtEndDate2" placeholder="End">
+                        </div>
                      </div>
-                  </div>
+                     <div class="form-group col-md-6 col-sm-12">
+                        <textarea class="form-control" placeholder="Enter your Role..." id="txtRole2" rows="4"></textarea>
+                     </div>
                </div>
             </div>
          </div>
-
+      </div>
          <div class="panel-group">
             <div class="panel panel-default">
                <div class="panel-heading">
@@ -143,17 +148,23 @@
                </div>
                <div id="workHistory3" class="panel-collapse collapse">
                   <div class="row panel-body">
-                     <div class="form-group col-md-4 col-sm-4">
-                        <label>Prjoect Name</label>
-                        <input type="text" class="form-control" id="">
+                     <div class="form-group col-md-3 col-sm-12">
+                        <label>Job Title</label>
+                        <input type="text" class="form-control" id="txtJobTitle3">
                      </div>
-                     <div class="form-group col-md-6 col-sm-6">
-                        <label>Prjoect Url</label>
-                        <input type="text" class="form-control" id="">
+                     <div class="form-group col-md-4 col-sm-12">
+                        <label>Employer</label>
+                        <input type="text" class="form-control" id="txtEmployer3">
                      </div>
-                     <div class="form-group col-md-6 col-sm-6">
-                        <label>Project Description</label>
-                        <input type="text" class="form-control" id="">
+                     <div class="form-group col-md-2 col-sm-2">
+                        <label>Start Year / End Year</label>
+                        <div style="display: inline-flex;">
+                           <input type="number" class="form-control input-group-addon" id="txtstartDate3" placeholder="Start">
+                           <input type="number " class="form-control input-group-addon" id="txtEndDate3" placeholder="End">
+                        </div>
+                     </div>
+                     <div class="form-group col-md-6 col-sm-12">
+                        <textarea class="form-control" placeholder="Enter your Role..." id="txtRole3" rows="4"></textarea>
                      </div>
                   </div>
                </div>
@@ -162,8 +173,8 @@
       </div>
       <br>
       <br>
-      <a class="btn btn-custom btnPrevious" >Prev</a>
-      <a class="btn btn-custom btnNext" >Next</a>
+      <a class="btn btn-custom btnPrevious" onclick="SaveData()">Prev</a>
+      <a class="btn btn-custom btnNext" onclick="SaveData()">Next</a>
    </section>
 
 
@@ -177,15 +188,15 @@
          <div class="row skill-div">
             <div class="form-group col-md-3 col-sm-12" id="skill1">
                <label>Skills 1</label>
-               <input type='text' class='form-control' id=''>
+               <input type='text' class='form-control' id='txtskill1'>
             </div>
          </div>
 
       </div>
       <br>
 
-      <a class="btn btn-custom btnPrevious" >Prev</a>
-      <a class="btn btn-custom btnNext" >Next</a>
+      <a class="btn btn-custom btnPrevious" onclick="SaveData()">Prev</a>
+      <a class="btn btn-custom btnNext" onclick="SaveData()">Next</a>
    </section>
 
    <section class="tab-pane container" id="education">
@@ -201,21 +212,21 @@
                   <div class="row panel-body">
                      <div class="form-group col-md-4 col-sm-12">
                         <label>School Name /College Name</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" id="txtCollegeName1">
                      </div>
                      <div class="form-group col-md-4 col-sm-12">
                         <label>Degree</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" id="txtDegree1">
                      </div>
                      <div class="form-group col-md-4 col-sm-12">
                         <label>Field of Study</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" id="txtStudy1">
                      </div>
                      <div class="form-group col-md-2 col-sm-2">
                         <label>Start Year / End Year</label>
                         <div style="display: inline-flex;">
-                           <input type="number" class="form-control input-group-addon" id="" placeholder="Start">
-                           <input type="number " class="form-control input-group-addon" id="" placeholder="End">
+                           <input type="number" class="form-control input-group-addon" id="txtEdustartDate1" placeholder="Start">
+                           <input type="number " class="form-control input-group-addon" id="txtEduEndDate1" placeholder="End">
                         </div>
                      </div>
                   </div>
@@ -232,21 +243,21 @@
                   <div class="row panel-body">
                      <div class="form-group col-md-4 col-sm-12">
                         <label>School Name /College Name</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" id="txtCollegeName2">
                      </div>
                      <div class="form-group col-md-4 col-sm-12">
                         <label>Degree</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" id="txtDegree2">
                      </div>
                      <div class="form-group col-md-4 col-sm-12">
                         <label>Field of Study</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" id="txtStudy2">
                      </div>
                      <div class="form-group col-md-2 col-sm-2">
                         <label>Start Year / End Year</label>
                         <div style="display: inline-flex;">
-                           <input type="number" class="form-control input-group-addon" id="" placeholder="Start">
-                           <input type="number " class="form-control input-group-addon" id="" placeholder="End">
+                           <input type="number" class="form-control input-group-addon" id="txtEdustartDate2" placeholder="Start">
+                           <input type="number " class="form-control input-group-addon" id="txtEduEndDate2" placeholder="End">
                         </div>
                      </div>
                   </div>
@@ -256,8 +267,8 @@
       </div>
       <br>
       <br>
-      <a class="btn btn-custom btnPrevious">Prev</a>
-      <a class="btn btn-custom btnNext">Next</a>
+      <a class="btn btn-custom btnPrevious" onclick="SaveData()">Prev</a>
+      <a class="btn btn-custom btnNext" onclick="SaveData()">Next</a>
    </section>
 
    <section class="tab-pane container" id='projects'>
@@ -272,15 +283,15 @@
                <div class="row panel-body">
                   <div class="form-group col-md-4 col-sm-12">
                      <label>Prjoect Name</label>
-                     <input type="text" class="form-control" id="">
+                     <input type="text" class="form-control" id="txtProjectName1">
                   </div>
                   <div class="form-group col-md-6 col-sm-12">
                      <label>Prjoect Url</label>
-                     <input type="text" class="form-control" id="">
+                     <input type="text" class="form-control" id="txtProjectUrl1">
                   </div>
                   <div class="form-group col-md-6 col-sm-12">
                      <label>Project Description</label>
-                     <input type="text" class="form-control" id="">
+                     <input type="text" class="form-control" id="txtProjectDes1">
                   </div>
                </div>
             </div>
@@ -296,15 +307,15 @@
                <div class="row panel-body">
                   <div class="form-group col-md-4 col-sm-12">
                      <label>Prjoect Name</label>
-                     <input type="text" class="form-control" id="">
+                     <input type="text" class="form-control" id="txtProjectName2">
                   </div>
                   <div class="form-group col-md-6 col-sm-12">
                      <label>Prjoect Url</label>
-                     <input type="text" class="form-control" id="">
+                     <input type="text" class="form-control" id="txtProjectUrl2">
                   </div>
                   <div class="form-group col-md-6 col-sm-12">
                      <label>Project Description</label>
-                     <input type="text" class="form-control" id="">
+                     <input type="text" class="form-control" id="txtProjectDes2">
                   </div>
                </div>
             </div>
@@ -313,8 +324,8 @@
    </div>
    <br>
 
-   <a class="btn btn-custom btnPrevious" >Prev</a>
-   <a class="btn btn-custom btnNext" >Next</a>
+   <a class="btn btn-custom btnPrevious" onclick="SaveData()">Prev</a>
+   <a class="btn btn-custom btnNext" onclick="SaveData()">Next</a>
 </section>
 
 <section class="tab-pane container" id="other">
@@ -328,7 +339,7 @@
       <div class="row cert-div">
          <div class="form-group col-md-6 col-sm-12	">
             <label>1</label>
-            <input type="text" class="form-control" id="">
+            <input type="text" class="form-control" id="txtOther1">
          </div>
       </div>
 
@@ -337,13 +348,14 @@
    <a class="btn btn-custom btnPrevious" >Prev</a>
 
    <div class="row" style="text-align: center;margin-bottom: 10px;">
-      <button class="btn btn-custom">Submit</button>
+      <button class="btn btn-custom" onclick="SaveData()">Submit</button>
    </div>
 </section>
 
 </div>
 
-<footer>
+<footer style="text-align: center;">
+   <!-- <span >Copyright © Abhay kumar 2020</span> -->
 </footer>
 
 <!-- Js Files start -->
