@@ -58,7 +58,7 @@ document.querySelector('.skill-div').addEventListener('click', (e) =>{
 
 //For Saving Data
 
-function SaveData(){
+function SaveData(e){
 
 	let htmlids = document.querySelectorAll('*[id]');
 	let arrOfId = Array.prototype.map.call( htmlids, function(elem) {
@@ -74,7 +74,11 @@ function SaveData(){
 	
 	alert('DATA SAVED LOCALLY.');
 
+	if(e.target.id=="saveDataId"){
+		window.open('https://abhay304.github.io/Resume-Builder/pdf.html');
+	}
 }
+
 
 
 function onLoad(){
