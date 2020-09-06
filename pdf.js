@@ -46,4 +46,3 @@ window.onload = function () {
 	setTimeout(onLoad, 2000);
 	// onLoad();
 }
-
