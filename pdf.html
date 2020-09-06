@@ -1,156 +1,49 @@
-<!DOCTYPE html> 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Resume</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Source+Sans+Pro:400,400i" rel="stylesheet">
-    <body id="container">
-        <div class="page">
-            <div class="section row">
-                <h1 class="col"><span style="font-weight:700" id="txtName">Jugal</span></h1>
-                <div class="contact-info col-right">
-                    <!-- <div>201 . 920 . 0729</div> -->
-                    <div><a href="" id ="txtEmail">jugalm@nyu.edu</a></div>
-                    <div><a id="txtNumber">jugalm.com</a></div>
-                    <div><a href="" id="txtLProfile">jugalm.com</a></div>
-                </div>
-            </div>
-            <div class="section row">
-                <h2 class="col">Experience</h2>
-
-                <!-- Section 1 for work Exp -->
-
-                <div class="section-text col-right">
-                    <div class="row">
-                        <div class="col">
-                            <h3 id="txtEmployer1">Google</h3>
-                        </div>
-                    </div>
-                    <div class="row subsection">
-                        <div class="emph col" id="txtJobTitle1">Full stack engineer</div>
-                        <div class="col-right light" id="txtWrkDate1">July 2015 - Present</div>
-                    </div>
-                    <div class="desc">
-                        <p id="txtRole1">YouTube Trust and Safety</p>
-                    </div>
-                </div>
-                <!-- Section 1 for work Exp  end-->
-
-                <!-- Section 2 for work Exp -->
-                <div class="section-text col-right">
-                    <div class="row">
-                        <div class="col">
-                            <h3 id="txtEmployer2">Emotion - New York University</h3>
-                        </div>
-                    </div>
-                    <div class="row subsection">
-                        <div class="emph col" id="txtJobTitle2">Research Assistant, Full Stack Engineer</div>
-                        <div class="col-right light" id="txtWrkDate2">June 2014 - August 2014</div>
-                    </div>
-
-                    <div class="desc">
-                        <p id="txtRole2">YouTube Trust and Safety</p>
-                    </div>
-                </div>
-                <!-- Section 2 for work Exp end-->
-            </div>
-
-            <div class="section row">
-                <h2 class="col">Skills</h2>
-                <div class="section-text col-right row">
-                    <ul class="skills" style="width:25%">
-                        <li id="txtskill1">C++, Java</li>
-                        <li id="txtskill4">Javascript</li>
-                        <li id="txtskill7">Python, PHP</li>
-                        <li id="txtskill10">HTML5, CSS3, SVG</li>
-                    </ul>
-                    <ul class="skills" style="width:35%">
-                        <li id="txtskill2">Qt, OpenGL/SDL, V8</li>
-                        <li id="txtskill5">jQuery, backbone, node</li>
-                        <li id="txtskill8">Django, App engine</li>
-                        <li id="txtskill11">LESS, Bootstrap, d3.js</li>
-                        
-                    </ul>
-                    <ul class="skills">
-                        <li id="txtskill3">MySQL, MongoDB</li>
-                        <li id="txtskill6">grunt, jasmine</li>
-                        <li id="txtskill9">Flash, Actionscript 3</li>
-                        <li id="txtskill12">Git, Photoshop, Illustrator</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="section row">
-
-                <h2 class="col">Education</h2>
-                <div class="section-text col-right">
-                    <h3><span class="emph" id="txtStudy1">Master of Science</span>
-                    <div class="col-right light" id="txtEducationDate1" style="font-weight: 400">September 2013 - May 2015</div></h3>
-                    <div id="txtCollegeName1">New York University, Courant Institute of Mathematical Science</div>
-                    
-                </div>
-                <div class="section-text col-right">
-                    <h3><span class="emph" id="txtStudy2">Bachelor of Engineering</span>
-                    <div class="col-right light" id="txtEducationDate2" style="font-weight: 400">September 2008 - July 2012 </div></h3>
-                    <div id="txtCollegeName2">University of Pune</div>
 
 
-                </div>
+function onLoad(){
 
-            </div>
+	let htmlids = document.querySelectorAll('*[id]');
+	let arrOfId = Array.prototype.map.call( htmlids, function(elem) {
+		return elem.id;
+	});
 
-            <div class="section row">
-                <h2 class="col">Projects</h2>
-                <div class="section-text col-right">
-                    <h3><span class="emph" id="txtProjectName1">To Do List</span></h3>
-                    <div id="txtProjectDes1">To Do List</div>
-                    <div class="row">
-                        <div class="col light" id="txtProjectUrl1" style="text-transform: none !important;">New York, USA</div>
-                    </div>
-                </div>
+	for(i=0;i<arrOfId.length;i++){
+		if(arrOfId[i].includes('txt')){
+			document.getElementById(arrOfId[i]).innerText = localStorage.getItem(arrOfId[i]);
+		}
 
-                <div class="section-text col-right">
-                    <h3><span class="emph" id="txtProjectName2">To Do List</span></h3>
-                    <div id="txtProjectDes2">To Do List</div>
-                    <div class="row">
-                        <div class="col light" id="txtProjectUrl2" style="text-transform: none !important;">New York, USA</div>
-                    </div>
-                </div>
-
-                <div class="section-text col-right">
-                    <h3><span class="emph" id="txtProjectName3">To Do List</span></h3>
-                    <div id="txtProjectDes3">To Do List</div>
-                    <div class="row">
-                        <div class="col light" id="txtProjectUrl3" style="text-transform: none !important;">New York, USA</div>
-                    </div>
-                </div>
-            </div>
+		if(arrOfId[i].includes('txtOther') && !localStorage.getItem(arrOfId[i])){
+			document.getElementById(arrOfId[i]).style.display="none";
+		}	
+	}
 
 
-            <div class="section row">
-                <h2 class="col">Trannings & Achievemnets</h2>
-                <div class="section-text col-right">
-                    <ul>
-                       <li id="txtOther1">MySQL, MongoDB</li>
-                       <li id="txtOther2">MySQL, MongoDB</li>
-                       <li id="txtOther3">MySQL, MongoDB</li>
-                       <li id="txtOther4">MySQL, MongoDB</li>
-                       <li id="txtOther5">MySQL, MongoDB</li>
-                       <li id="txtOther6">MySQL, MongoDB</li>
-                   </ul>
-               </div>
-           </div>
+	if(localStorage.getItem('txtstartDate1') && localStorage.getItem('txtEndDate1')){
+		document.getElementById('txtWrkDate1').innerText = localStorage.getItem('txtstartDate1') +" - "+ localStorage.getItem('txtEndDate1');
+	}
 
-           <div class="section row">
-            <h2 class="col">Interests</h2>
-            <div class="section-text col-right"><span class="key" id="txthobby1">Machine learning</span> <span class="key" id="txthobby2">Data visualization</span><span class="key" id="txthobby3">Computer vision &amp; graphics</span></div>
-        </div>
+	if(localStorage.getItem('txtstartDate2') && localStorage.getItem('txtEndDate2')){
+		document.getElementById('txtWrkDate2').innerText = localStorage.getItem('txtstartDate2') +" - "+ localStorage.getItem('txtEndDate2');
+	}
+
+	if(localStorage.getItem('txtEdustartDate1') && localStorage.getItem('txtEduEndDate1')){
+		document.getElementById('txtEducationDate1').innerText = localStorage.getItem('txtEdustartDate1') +" - "+ localStorage.getItem('txtEduEndDate1');
+	}
+
+	if(localStorage.getItem('txtEdustartDate2') || localStorage.getItem('txtEduEndDate2')){
+		document.getElementById('txtEducationDate2').innerText = localStorage.getItem('txtEdustartDate2') + localStorage.getItem('txtEduEndDate2');
+	}
+
+	window.print();
+
+	// const element = document.getElementById('container');
+	// html2pdf().from(element).set({ html2canvas: { scale: 1 } }).save();
 
 
-    </div>
-</body>
-<script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.min.js"></script>
-<script async src="pdf.js"></script>
+}
 
-</html>
+window.onload = function () { 
+	setTimeout(onLoad, 2000);
+	// onLoad();
+}
+
