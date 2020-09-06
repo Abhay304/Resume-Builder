@@ -1,3 +1,5 @@
+
+
 function onLoad(){
 
 	let htmlids = document.querySelectorAll('*[id]');
@@ -11,8 +13,15 @@ function onLoad(){
 		}
 	}
 
+	window.print();
+
+	// const element = document.getElementById('container');
+	// html2pdf().from(element).set({ html2canvas: { scale: 1 } }).save();
+
+
 }
 
 window.onload = function () { 
-	setTimeout(onLoad, 4000);
+	setTimeout(onLoad, 3000);
 }
+
