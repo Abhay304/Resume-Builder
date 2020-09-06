@@ -50,7 +50,7 @@
                   <input type="email" class="form-control" id="txtEmail">
                </div>
                <div class="form-group col-md-4 col-sm-12">
-                  <label>Linkdien Profile</label>
+                  <label>Portfolio</label>
                   <input type="text" class="form-control" id="txtLProfile">
                </div>
 
@@ -67,15 +67,34 @@
                   <input type="text" class="form-control" id="txtAddress">
                </div>
 
+               <div class="form-group col-md-2 col-sm-2">
+                  <label>Hobbies 1</label>
+                  <input type="text" class="form-control" id="txthobby1">
+               </div>
+
+               <div class="form-group col-md-2 col-sm-2">
+                  <label>Hobbies 2</label>
+                  <input type="text" class="form-control" id="txthobby2">
+               </div>
+
+               <div class="form-group col-md-2 col-sm-2">
+                  <label>Hobbies 3</label>
+                  <input type="text" class="form-control" id="txthobby3">
+               </div>
+
             </div>
-            <div class="">
+
+
+            <!-- Browse Functionality -->
+            <!-- <div class="">
              <label  for="upload" class="btn custom-file-input">Browse</label>
              <input id="upload" type="file" name="photo" style="display: none;">
-          </div>
+          </div> -->
+
        </div>
        <br>
        <br>
-       <a class="btn btn-custom btnNext" onclick="SaveData()">Next</a>
+       <a class="btn btn-custom btnNext" onclick="SaveData(event)">Next</a>
     </section>
 
 
@@ -97,15 +116,15 @@
                         <label>Employer</label>
                         <input type="text" class="form-control" id="txtEmployer1">
                      </div>
-                     <div class="form-group col-md-2 col-sm-2">
+                     <div class="form-group col-md-4 col-sm-4">
                         <label>Start Year / End Year</label>
                         <div style="display: inline-flex;">
-                           <input type="number" class="form-control input-group-addon" id="txtstartDate1" placeholder="Start">
-                           <input type="number " class="form-control input-group-addon" id="txtEndDate1" placeholder="End">
+                           <input type="text" class="form-control input-group-addon" placeholder="November  2018" id="txtstartDate1" placeholder="Start">
+                           <input type="text" class="form-control input-group-addon" placeholder="October  2020 / Present" id="txtEndDate1" placeholder="End">
                         </div>
                      </div>
                      <div class="form-group col-md-6 col-sm-12">
-                        <textarea class="form-control" placeholder="Enter your Role..." rows="4" id="txtRole1"></textarea>
+                        <textarea class="form-control" placeholder="Enter your Role..." rows="5" id="txtRole1"></textarea>
                      </div>
                   </div>
                </div>
@@ -119,7 +138,7 @@
                </div>
                <div id="workHistory2" class="panel-collapse collapse">
                   <div class="row panel-body">
-                  <div class="form-group col-md-3 col-sm-12">
+                     <div class="form-group col-md-3 col-sm-12">
                         <label>Job Title</label>
                         <input type="text" class="form-control" id="txtJobTitle2">
                      </div>
@@ -127,20 +146,20 @@
                         <label>Employer</label>
                         <input type="text" class="form-control" id="txtEmployer2">
                      </div>
-                     <div class="form-group col-md-2 col-sm-2">
+                     <div class="form-group col-md-4 col-sm-4">
                         <label>Start Year / End Year</label>
                         <div style="display: inline-flex;">
-                           <input type="number" class="form-control input-group-addon" id="txtstartDate2" placeholder="Start">
-                           <input type="number " class="form-control input-group-addon" id="txtEndDate2" placeholder="End">
+                           <input type="text" class="form-control input-group-addon" placeholder="November  2018" id="txtstartDate2" placeholder="Start">
+                           <input type="text " class="form-control input-group-addon" placeholder="November  2020 / Present" id="txtEndDate2" placeholder="End"> 
                         </div>
                      </div>
                      <div class="form-group col-md-6 col-sm-12">
                         <textarea class="form-control" placeholder="Enter your Role..." id="txtRole2" rows="4"></textarea>
                      </div>
+                  </div>
                </div>
             </div>
          </div>
-      </div>
          <div class="panel-group">
             <div class="panel panel-default">
                <div class="panel-heading">
@@ -173,8 +192,8 @@
       </div>
       <br>
       <br>
-      <a class="btn btn-custom btnPrevious" onclick="SaveData()">Prev</a>
-      <a class="btn btn-custom btnNext" onclick="SaveData()">Next</a>
+      <a class="btn btn-custom btnPrevious" onclick="SaveData(event)">Prev</a>
+      <a class="btn btn-custom btnNext" onclick="SaveData(event)">Next</a>
    </section>
 
 
@@ -195,8 +214,8 @@
       </div>
       <br>
 
-      <a class="btn btn-custom btnPrevious" onclick="SaveData()">Prev</a>
-      <a class="btn btn-custom btnNext" onclick="SaveData()">Next</a>
+      <a class="btn btn-custom btnPrevious" onclick="SaveData(event)">Prev</a>
+      <a class="btn btn-custom btnNext" onclick="SaveData(event)">Next</a>
    </section>
 
    <section class="tab-pane container" id="education">
@@ -267,14 +286,14 @@
       </div>
       <br>
       <br>
-      <a class="btn btn-custom btnPrevious" onclick="SaveData()">Prev</a>
-      <a class="btn btn-custom btnNext" onclick="SaveData()">Next</a>
+      <a class="btn btn-custom btnPrevious" onclick="SaveData(event)">Prev</a>
+      <a class="btn btn-custom btnNext" onclick="SaveData(event)">Next</a>
    </section>
 
    <section class="tab-pane container" id='projects'>
       <h2 class="tab-heading">PROJECTS</h2>
       <div class="container-fluid">
-        <div class="panel-group">
+       <div class="panel-group">
          <div class="panel panel-default">
             <div class="panel-heading">
                <a data-toggle="collapse" href="#project1"><span class="glyphicon glyphicon-plus"> SECTION 1</span></a>
@@ -301,7 +320,7 @@
       <div class="panel-group">
          <div class="panel panel-default">
             <div class="panel-heading">
-               <a data-toggle="collapse" href="#project2"><span class="glyphicon glyphicon-plus"> SECTION 1</span></a>
+               <a data-toggle="collapse" href="#project2"><span class="glyphicon glyphicon-plus"> SECTION 2</span></a>
             </div>
             <div id="project2" class="panel-collapse collapse">
                <div class="row panel-body">
@@ -321,11 +340,36 @@
             </div>
          </div>
       </div>
+
+      <div class="panel-group">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <a data-toggle="collapse" href="#project3"><span class="glyphicon glyphicon-plus"> SECTION 3</span></a>
+            </div>
+            <div id="project3" class="panel-collapse collapse">
+               <div class="row panel-body">
+                  <div class="form-group col-md-4 col-sm-12">
+                     <label>Prjoect Name</label>
+                     <input type="text" class="form-control" id="txtProjectName3">
+                  </div>
+                  <div class="form-group col-md-6 col-sm-12">
+                     <label>Prjoect Url</label>
+                     <input type="text" class="form-control" id="txtProjectUrl3">
+                  </div>
+                  <div class="form-group col-md-6 col-sm-12">
+                     <label>Project Description</label>
+                     <input type="text" class="form-control" id="txtProjectDes3">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
    </div>
    <br>
 
-   <a class="btn btn-custom btnPrevious" onclick="SaveData()">Prev</a>
-   <a class="btn btn-custom btnNext" onclick="SaveData()">Next</a>
+   <a class="btn btn-custom btnPrevious" onclick="SaveData(event)">Prev</a>
+   <a class="btn btn-custom btnNext" onclick="SaveData(event)">Next</a>
 </section>
 
 <section class="tab-pane container" id="other">
@@ -348,7 +392,7 @@
    <a class="btn btn-custom btnPrevious" >Prev</a>
 
    <div class="row" style="text-align: center;margin-bottom: 10px;">
-      <button class="btn btn-custom" onclick="SaveData()">Submit</button>
+      <button class="btn btn-custom" onclick="SaveData(event)" id="saveDataId">Submit</button>
    </div>
 </section>
 
