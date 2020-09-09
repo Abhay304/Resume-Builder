@@ -34,58 +34,73 @@
    </header>
    <div class="tab-content" style="padding: 2rem;">
       <section class="tab-pane active container" id="heading">
-         <h2 class="tab-heading">HEADING DEATILS</h2>
-         <div class="container-fluid">
-            <div class="row">
-               <div class="form-group col-md-3 col-sm-12">
-                  <label>Name</label>
-                  <input type="text" class="form-control" id="txtName">
-               </div>
-               <div class="form-group col-md-2 col-sm-12">
-                  <label>Phone</label>
-                  <input type="number" class="form-control" id="txtNumber">
-               </div>
-               <div class="form-group col-md-3 col-sm-12">
-                  <label>Email Address</label>
-                  <input type="email" class="form-control" id="txtEmail">
-               </div>
-               <div class="form-group col-md-4 col-sm-12">
-                  <label>Portfolio</label>
-                  <input type="text" class="form-control" id="txtLProfile">
-               </div>
+         <div class="alert shadow-soft mb-4 mb-lg-5" role="alert">
+          <span class="icon-lg"><span class="far fa-thumbs-up"></span></span>
+          <span><strong>Important Note</strong></span>
+          <br>
+          <ul>
+             <li>All the fileds with star(*) are mandatory.</li>
+             <li>Kindly use Google chrome to fill the form.</li>
+             <li>You can leave any non mandatory field blank if you don't want fill it.</li>
+             <hr>
+             <li class="mb-0">Your Data is safe with you as we are storing data locally.</li>
+             <li class="mb-0">Your data will be only available on the browser for lifetime on which you are filing the form.</li>
+             <li class="mb-0">Your data will not expire unless you uninstall the browser or clear the local storage of browser.</li>
+          </ul>
+       </div>
 
+       <h2 class="tab-heading">HEADING DEATILS</h2>
+       <div class="container-fluid">
+         <div class="row">
+            <div class="form-group col-md-3 col-sm-12">
+               <label>Name</label><span class="mand-star"></span>
+               <input type="text" class="form-control" id="txtName" placeholder="your name" maxlength="60">
             </div>
-            <div class="row">
-               <div class="form-group col-md-6 col-sm-12">
-                  <label>Current Company Job Title</label>
-                  <input type="text" class="form-control" id="txtJobTitle">
-               </div>
+            <div class="form-group col-md-2 col-sm-12">
+               <label>Phone</label><span class="mand-star"></span>
+               <input type="number" class="form-control" id="txtNumber" placeholder="8888888888" maxlength="10">
             </div>
-            <div class="row">
-               <div class="form-group col-md-4 col-sm-12">
-                  <label>State / City / Pincode</label>
-                  <input type="text" class="form-control" id="txtAddress">
-               </div>
-
-               <div class="form-group col-md-2 col-sm-2">
-                  <label>Hobbies 1</label>
-                  <input type="text" class="form-control" id="txthobby1">
-               </div>
-
-               <div class="form-group col-md-2 col-sm-2">
-                  <label>Hobbies 2</label>
-                  <input type="text" class="form-control" id="txthobby2">
-               </div>
-
-               <div class="form-group col-md-2 col-sm-2">
-                  <label>Hobbies 3</label>
-                  <input type="text" class="form-control" id="txthobby3">
-               </div>
-
+            <div class="form-group col-md-3 col-sm-12">
+               <label>Email Address</label><span class="mand-star"></span>
+               <input type="email" class="form-control" id="txtEmail" placeholder="aa@gmail.com" maxlength="25">
+            </div>
+            <div class="form-group col-md-4 col-sm-12">
+               <label>Portfolio</label>
+               <input type="text" class="form-control" id="txtLProfile" placeholder="helloworld@Resume.com">
             </div>
 
+         </div>
+         <div class="row">
+            <div class="form-group col-md-6 col-sm-12">
+               <label>Current Company Job Title</label>
+               <input type="text" class="form-control" id="txtJobTitle" placeholder="Developer / Analyst / QA" maxlength="20">
+            </div>
+         </div>
+         <div class="row">
+            <div class="form-group col-md-4 col-sm-12">
+               <label>State / City / Pincode</label><span class="mand-star"></span>
+               <input type="text" class="form-control" id="txtAddress" placeholder="Karnataka-Bengaluru-100001" maxlength="30">
+            </div>
 
-            <!-- Browse Functionality -->
+            <div class="form-group col-md-2 col-sm-2">
+               <label>Hobby 1</label><span class="mand-star"></span>
+               <input type="text" class="form-control" id="txthobby1" placeholder="music" maxlength="20">
+            </div>
+
+            <div class="form-group col-md-2 col-sm-2">
+               <label>Hobby 2</label><span class="mand-star"></span>
+               <input type="text" class="form-control" id="txthobby2" placeholder="music" maxlength="20">
+            </div>
+
+            <div class="form-group col-md-2 col-sm-2">
+               <label>Hobby 3</label><span class="mand-star"></span>
+               <input type="text" class="form-control" id="txthobby3" placeholder="music" maxlength="20">
+            </div>
+
+         </div>
+
+
+         <!-- Browse Functionality -->
             <!-- <div class="">
              <label  for="upload" class="btn custom-file-input">Browse</label>
              <input id="upload" type="file" name="photo" style="display: none;">
@@ -94,223 +109,49 @@
        </div>
        <br>
        <br>
-       <a class="btn btn-custom btnNext" onclick="SaveData(event)">Next</a>
+       <a class="btn btn-custom btnNext" onclick="ValidateFormTab1(event);">Next</a>
     </section>
 
 
     <section class="tab-pane container" id="wrkHistory">
-      <h2 class="tab-heading">WORK HISTORY</h2>
-      <div class="container-fluid">
-         <div class="panel-group">
-            <div class="panel panel-default">
-               <div class="panel-heading">
-                  <a data-toggle="collapse" href="#workHistory1"><span class="glyphicon glyphicon-plus"> SECTION 1</span></a>
-               </div>
-               <div id="workHistory1" class="panel-collapse collapse">
-                  <div class="row panel-body">
-                     <div class="form-group col-md-3 col-sm-12">
-                        <label>Job Title</label>
-                        <input type="text" class="form-control" id="txtJobTitle1">
-                     </div>
-                     <div class="form-group col-md-4 col-sm-12">
-                        <label>Employer</label>
-                        <input type="text" class="form-control" id="txtEmployer1">
-                     </div>
-                     <div class="form-group col-md-4 col-sm-4">
-                        <label>Start Year / End Year</label>
-                        <div style="display: inline-flex;">
-                           <input type="text" class="form-control input-group-addon" placeholder="November  2018" id="txtstartDate1" placeholder="Start">
-                           <input type="text" class="form-control input-group-addon" placeholder="October  2020 / Present" id="txtEndDate1" placeholder="End">
-                        </div>
-                     </div>
-                     <div class="form-group col-md-6 col-sm-12">
-                        <textarea class="form-control" placeholder="Enter your Role..." rows="5" id="txtRole1"></textarea>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-         <div class="panel-group">
-            <div class="panel panel-default">
-               <div class="panel-heading">
-                  <a data-toggle="collapse" href="#workHistory2"><span class="glyphicon glyphicon-plus"> SECTION 2</span></a>
-               </div>
-               <div id="workHistory2" class="panel-collapse collapse">
-                  <div class="row panel-body">
-                     <div class="form-group col-md-3 col-sm-12">
-                        <label>Job Title</label>
-                        <input type="text" class="form-control" id="txtJobTitle2">
-                     </div>
-                     <div class="form-group col-md-4 col-sm-12">
-                        <label>Employer</label>
-                        <input type="text" class="form-control" id="txtEmployer2">
-                     </div>
-                     <div class="form-group col-md-4 col-sm-4">
-                        <label>Start Year / End Year</label>
-                        <div style="display: inline-flex;">
-                           <input type="text" class="form-control input-group-addon" placeholder="November  2018" id="txtstartDate2" placeholder="Start">
-                           <input type="text " class="form-control input-group-addon" placeholder="November  2020 / Present" id="txtEndDate2" placeholder="End"> 
-                        </div>
-                     </div>
-                     <div class="form-group col-md-6 col-sm-12">
-                        <textarea class="form-control" placeholder="Enter your Role..." id="txtRole2" rows="4"></textarea>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="panel-group">
-            <div class="panel panel-default">
-               <div class="panel-heading">
-                  <a data-toggle="collapse" href="#workHistory3"><span class="glyphicon glyphicon-plus"> SECTION 3</span></a>
-               </div>
-               <div id="workHistory3" class="panel-collapse collapse">
-                  <div class="row panel-body">
-                     <div class="form-group col-md-3 col-sm-12">
-                        <label>Job Title</label>
-                        <input type="text" class="form-control" id="txtJobTitle3">
-                     </div>
-                     <div class="form-group col-md-4 col-sm-12">
-                        <label>Employer</label>
-                        <input type="text" class="form-control" id="txtEmployer3">
-                     </div>
-                     <div class="form-group col-md-2 col-sm-2">
-                        <label>Start Year / End Year</label>
-                        <div style="display: inline-flex;">
-                           <input type="number" class="form-control input-group-addon" id="txtstartDate3" placeholder="Start">
-                           <input type="number " class="form-control input-group-addon" id="txtEndDate3" placeholder="End">
-                        </div>
-                     </div>
-                     <div class="form-group col-md-6 col-sm-12">
-                        <textarea class="form-control" placeholder="Enter your Role..." id="txtRole3" rows="4"></textarea>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <br>
-      <br>
-      <a class="btn btn-custom btnPrevious" onclick="SaveData(event)">Prev</a>
-      <a class="btn btn-custom btnNext" onclick="SaveData(event)">Next</a>
-   </section>
-
-
-   <section class="tab-pane container" id="skills">
-      <h2 class="tab-heading">SKILLS</h2>
-      <div class="container-fluid">
-         <div class="row" style="margin-bottom: 15px;">
-            <button class="btn btn-custom" type="button"  onclick="addElm('skill-div')">Add new skill</button>
-         </div>
-
-         <div class="row skill-div">
-            <div class="form-group col-md-3 col-sm-12" id="skill1">
-               <label>Skills 1</label>
-               <input type='text' class='form-control' id='txtskill1'>
-            </div>
-         </div>
-
-      </div>
-      <br>
-
-      <a class="btn btn-custom btnPrevious" onclick="SaveData(event)">Prev</a>
-      <a class="btn btn-custom btnNext" onclick="SaveData(event)">Next</a>
-   </section>
-
-   <section class="tab-pane container" id="education">
-      <h2 class="tab-heading">EDUCATION</h2>
-      <div class="container-fluid">
-
-         <div class="panel-group">
-            <div class="panel panel-default">
-               <div class="panel-heading">
-                  <a data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-plus"> SECTION 1</span></a>
-               </div>
-               <div id="collapse1" class="panel-collapse collapse">
-                  <div class="row panel-body">
-                     <div class="form-group col-md-4 col-sm-12">
-                        <label>School Name /College Name</label>
-                        <input type="text" class="form-control" id="txtCollegeName1">
-                     </div>
-                     <div class="form-group col-md-4 col-sm-12">
-                        <label>Degree</label>
-                        <input type="text" class="form-control" id="txtDegree1">
-                     </div>
-                     <div class="form-group col-md-4 col-sm-12">
-                        <label>Field of Study</label>
-                        <input type="text" class="form-control" id="txtStudy1">
-                     </div>
-                     <div class="form-group col-md-2 col-sm-2">
-                        <label>Start Year / End Year</label>
-                        <div style="display: inline-flex;">
-                           <input type="number" class="form-control input-group-addon" id="txtEdustartDate1" placeholder="Start">
-                           <input type="number " class="form-control input-group-addon" id="txtEduEndDate1" placeholder="End">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-         <div class="panel-group">
-            <div class="panel panel-default">
-               <div class="panel-heading">
-                  <a data-toggle="collapse" href="#collapse2"><span class="glyphicon glyphicon-plus"> SECTION 2</span></a>
-               </div>
-               <div id="collapse2" class="panel-collapse collapse">
-                  <div class="row panel-body">
-                     <div class="form-group col-md-4 col-sm-12">
-                        <label>School Name /College Name</label>
-                        <input type="text" class="form-control" id="txtCollegeName2">
-                     </div>
-                     <div class="form-group col-md-4 col-sm-12">
-                        <label>Degree</label>
-                        <input type="text" class="form-control" id="txtDegree2">
-                     </div>
-                     <div class="form-group col-md-4 col-sm-12">
-                        <label>Field of Study</label>
-                        <input type="text" class="form-control" id="txtStudy2">
-                     </div>
-                     <div class="form-group col-md-2 col-sm-2">
-                        <label>Start Year / End Year</label>
-                        <div style="display: inline-flex;">
-                           <input type="number" class="form-control input-group-addon" id="txtEdustartDate2" placeholder="Start">
-                           <input type="number " class="form-control input-group-addon" id="txtEduEndDate2" placeholder="End">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <br>
-      <br>
-      <a class="btn btn-custom btnPrevious" onclick="SaveData(event)">Prev</a>
-      <a class="btn btn-custom btnNext" onclick="SaveData(event)">Next</a>
-   </section>
-
-   <section class="tab-pane container" id='projects'>
-      <h2 class="tab-heading">PROJECTS</h2>
-      <div class="container-fluid">
-       <div class="panel-group">
+      <div class="alert shadow-soft mb-4 mb-lg-5" role="alert">
+       <span class="icon-lg"><span class="far fa-thumbs-up"></span></span>
+       <span><strong>Help Note</strong></span>
+       <br>
+       <ul>
+          <li>While filling the Role !! Design , Indentation , Spacing will reflect same as you fill here in the form.</li>
+          <li>Kindly write <b>Present</b> in the End Year for your current company.</li>
+          <li>Kindly see the placeholder while filling.</li>
+          <li>You can leave any non mandatory field blank if you don't want fill it.</li>
+       </ul>
+    </div>
+    <h2 class="tab-heading">WORK HISTORY</h2>
+    <div class="container-fluid">
+      <div class="panel-group">
          <div class="panel panel-default">
             <div class="panel-heading">
-               <a data-toggle="collapse" href="#project1"><span class="glyphicon glyphicon-plus"> SECTION 1</span></a>
+               <a data-toggle="collapse" href="#workHistory1"><span class="glyphicon glyphicon-plus"> SECTION 1</span></a>
             </div>
-            <div id="project1" class="panel-collapse collapse">
+            <div id="workHistory1" class="panel-collapse collapse">
                <div class="row panel-body">
+                  <div class="form-group col-md-3 col-sm-12">
+                     <label>Job Title</label>
+                     <input type="text" class="form-control" id="txtJobTitle1" placeholder="Developer / Analyst /QA" maxlength="30">
+                  </div>
                   <div class="form-group col-md-4 col-sm-12">
-                     <label>Prjoect Name</label>
-                     <input type="text" class="form-control" id="txtProjectName1">
+                     <label>Employer</label>
+                     <input type="text" class="form-control" id="txtEmployer1" placeholder="google" maxlength="20">
                   </div>
-                  <div class="form-group col-md-6 col-sm-12">
-                     <label>Prjoect Url</label>
-                     <input type="text" class="form-control" id="txtProjectUrl1">
+                  <div class="form-group col-md-4 col-sm-4">
+                     <label>Start Year / End Year</label>
+                     <div style="display: inline-flex;">
+                        <input type="text" class="form-control input-group-addon" placeholder="November  2018" id="txtstartDate1" placeholder="Start">
+                        <input type="text" class="form-control input-group-addon" placeholder="October  2020 / Present" id="txtEndDate1" placeholder="End">
+                     </div>
                   </div>
-                  <div class="form-group col-md-6 col-sm-12">
-                     <label>Project Description</label>
-                     <input type="text" class="form-control" id="txtProjectDes1">
+                  <div class="form-group col-md-8 col-sm-12">
+                     <label>Role</label>
+                     <textarea class="form-control" placeholder="Enter your Role..."  rows="4" id="txtRole1"></textarea>
                   </div>
                </div>
             </div>
@@ -320,80 +161,280 @@
       <div class="panel-group">
          <div class="panel panel-default">
             <div class="panel-heading">
-               <a data-toggle="collapse" href="#project2"><span class="glyphicon glyphicon-plus"> SECTION 2</span></a>
+               <a data-toggle="collapse" href="#workHistory2"><span class="glyphicon glyphicon-plus"> SECTION 2</span></a>
             </div>
-            <div id="project2" class="panel-collapse collapse">
+            <div id="workHistory2" class="panel-collapse collapse">
                <div class="row panel-body">
+                  <div class="form-group col-md-3 col-sm-12">
+                     <label>Job Title</label>
+                     <input type="text" class="form-control" id="txtJobTitle2" placeholder="Developer / Analyst /QA" maxlength="30">
+                  </div>
                   <div class="form-group col-md-4 col-sm-12">
-                     <label>Prjoect Name</label>
-                     <input type="text" class="form-control" id="txtProjectName2">
+                     <label>Employer</label>
+                     <input type="text" class="form-control" id="txtEmployer2" placeholder="facebook" maxlength="30">
                   </div>
-                  <div class="form-group col-md-6 col-sm-12">
-                     <label>Prjoect Url</label>
-                     <input type="text" class="form-control" id="txtProjectUrl2">
+                  <div class="form-group col-md-4 col-sm-4">
+                     <label>Start Year / End Year</label>
+                     <div style="display: inline-flex;">
+                        <input type="text" class="form-control input-group-addon" placeholder="November  2018" id="txtstartDate2" placeholder="Start">
+                        <input type="text " class="form-control input-group-addon" placeholder="November  2020 / Present" id="txtEndDate2" placeholder="End"> 
+                     </div>
                   </div>
-                  <div class="form-group col-md-6 col-sm-12">
-                     <label>Project Description</label>
-                     <input type="text" class="form-control" id="txtProjectDes2">
+                  <div class="form-group col-md-8 col-sm-12">
+                     <label>Role</label>
+
+                     <textarea class="form-control" placeholder="Enter your Role..." id="txtRole2" rows="4"></textarea>
                   </div>
                </div>
             </div>
          </div>
       </div>
-
       <div class="panel-group">
          <div class="panel panel-default">
             <div class="panel-heading">
-               <a data-toggle="collapse" href="#project3"><span class="glyphicon glyphicon-plus"> SECTION 3</span></a>
+               <a data-toggle="collapse" href="#workHistory3"><span class="glyphicon glyphicon-plus"> SECTION 3</span></a>
             </div>
-            <div id="project3" class="panel-collapse collapse">
+            <div id="workHistory3" class="panel-collapse collapse">
                <div class="row panel-body">
+                  <div class="form-group col-md-3 col-sm-12">
+                     <label>Job Title</label>
+                     <input type="text" class="form-control" id="txtJobTitle3" placeholder="Developer / Analyst /QA" maxlength="20">
+                  </div>
                   <div class="form-group col-md-4 col-sm-12">
-                     <label>Prjoect Name</label>
-                     <input type="text" class="form-control" id="txtProjectName3">
+                     <label>Employer</label>
+                     <input type="text" class="form-control" id="txtEmployer3" placeholder="amazon" maxlength="30">
                   </div>
-                  <div class="form-group col-md-6 col-sm-12">
-                     <label>Prjoect Url</label>
-                     <input type="text" class="form-control" id="txtProjectUrl3">
+                  <div class="form-group col-md-2 col-sm-2">
+                     <label>Start Year / End Year</label>
+                     <div style="display: inline-flex;">
+                        <input type="number" class="form-control input-group-addon" placeholder="November  2018" id="txtstartDate3" placeholder="Start">
+                        <input type="number " class="form-control input-group-addon" placeholder="October  2020" id="txtEndDate3" placeholder="End">
+                     </div>
                   </div>
-                  <div class="form-group col-md-6 col-sm-12">
-                     <label>Project Description</label>
-                     <input type="text" class="form-control" id="txtProjectDes3">
+                  <div class="form-group col-md-8 col-sm-12">
+                     <label>Role</label>
+                     <textarea class="form-control" placeholder="Enter your Role..." id="txtRole3" rows="4"></textarea>
                   </div>
                </div>
             </div>
+         </div>
+      </div>
+   </div>
+   <br>
+   <br>
+   <a class="btn btn-custom btnPrevious" onclick="">Prev</a>
+   <a class="btn btn-custom btnNext" onclick="SaveData(event);">Next</a>
+</section>
+
+
+<section class="tab-pane container" id="skills">
+   <h2 class="tab-heading">SKILLS</h2>
+   <div class="container-fluid">
+      <div class="row" style="margin-bottom: 15px;">
+         <button class="btn btn-custom" type="button"  onclick="addElm('skill-div')">Add new skill</button>
+      </div>
+
+      <div class="row skill-div">
+         <div class="form-group col-md-3 col-sm-12" id="skill1">
+            <label>Skill 1</label><span class="mand-star"></span>
+            <input type='text' class='form-control' id='txtskill1' maxlength="15">
          </div>
       </div>
 
    </div>
    <br>
 
-   <a class="btn btn-custom btnPrevious" onclick="SaveData(event)">Prev</a>
-   <a class="btn btn-custom btnNext" onclick="SaveData(event)">Next</a>
+   <a class="btn btn-custom btnPrevious" onclick="">Prev</a>
+   <a class="btn btn-custom btnNext" onclick="ValidateFormTab3(event);">Next</a>
+</section>
+
+<section class="tab-pane container" id="education">
+
+   <h2 class="tab-heading">EDUCATION</h2>
+   <div class="container-fluid">
+
+      <div class="panel-group">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <a data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-plus"> SECTION 1</span></a>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+               <div class="row panel-body">
+                  <div class="form-group col-md-4 col-sm-12">
+                     <label>School Name /College Name</label><span class="mand-star"></span>
+                     <input type="text" class="form-control" id="txtCollegeName1" placeholder="Best College of Engineering" maxlength="40">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-12">
+                     <label>Degree</label><span class="mand-star"></span>
+                     <input type="text" class="form-control" id="txtDegree1" placeholder="Btech /BSC /BCA / MBA" maxlength="15">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-12">
+                     <label>Field of Study</label><span class="mand-star"></span>
+                     <input type="text" class="form-control" id="txtStudy1" >
+                  </div>
+                  <div class="form-group col-md-2 col-sm-2">
+                     <label>Start Year / End Year</label><span class="mand-star"></span>
+                     <div style="display: inline-flex;">
+                        <input type="number" class="form-control input-group-addon" id="txtEdustartDate1" placeholder="Start">
+                        <input type="number" class="form-control input-group-addon" id="txtEduEndDate1" placeholder="End">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="panel-group">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <a data-toggle="collapse" href="#collapse2"><span class="glyphicon glyphicon-plus"> SECTION 2</span></a>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+               <div class="row panel-body">
+                  <div class="form-group col-md-4 col-sm-12">
+                     <label>School Name /College Name</label>
+                     <input type="text" class="form-control" id="txtCollegeName2" placeholder="Best Public school" maxlength="40">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-12">
+                     <label>Degree</label>
+                     <input type="text" class="form-control" id="txtDegree2" placeholder="PCM/PCB/SCIENCE" maxlength="15">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-12">
+                     <label>Field of Study</label>
+                     <input type="text" class="form-control" id="txtStudy2" maxlength="Electronics and Communication" maxlength="30">
+                  </div>
+                  <div class="form-group col-md-2 col-sm-2">
+                     <label>Start Year / End Year</label>
+                     <div style="display: inline-flex;">
+                        <input type="number" class="form-control input-group-addon" id="txtEdustartDate2" placeholder="Start">
+                        <input type="number " class="form-control input-group-addon" id="txtEduEndDate2" placeholder="End">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <br>
+   <br>
+   <a class="btn btn-custom btnPrevious" onclick="">Prev</a>
+   <a class="btn btn-custom btnNext" onclick="ValidateFormTab4(event);">Next</a>
+</section>
+
+<section class="tab-pane container" id='projects'>
+   <h2 class="tab-heading">PROJECTS</h2>
+   <div class="container-fluid">
+    <div class="panel-group">
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <a data-toggle="collapse" href="#project1"><span class="glyphicon glyphicon-plus"> SECTION 1</span></a>
+         </div>
+         <div id="project1" class="panel-collapse collapse">
+            <div class="row panel-body">
+               <div class="form-group col-md-4 col-sm-12">
+                  <label>Prjoect Name</label>
+                  <input type="text" class="form-control" id="txtProjectName1" placeholder="Resume Builder" maxlength="20">
+               </div>
+               <div class="form-group col-md-6 col-sm-12">
+                  <label>Prjoect Url</label>
+                  <input type="text" class="form-control" id="txtProjectUrl1" placeholder="https://abhay304.github.io/Resume-Builder/">
+               </div>
+               <div class="form-group col-md-6 col-sm-12">
+                  <label>Project Description</label>
+                  <input type="text" class="form-control" id="txtProjectDes1" placeholder="few lines about project">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="panel-group">
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <a data-toggle="collapse" href="#project2"><span class="glyphicon glyphicon-plus"> SECTION 2</span></a>
+         </div>
+         <div id="project2" class="panel-collapse collapse">
+            <div class="row panel-body">
+               <div class="form-group col-md-4 col-sm-12">
+                  <label>Prjoect Name</label>
+                  <input type="text" class="form-control" id="txtProjectName2" placeholder="facebook clone" maxlength="20">
+               </div>
+               <div class="form-group col-md-6 col-sm-12">
+                  <label>Prjoect Url</label>
+                  <input type="text" class="form-control" id="txtProjectUrl2" placeholder="https://www.github.io/facebook/clone">
+               </div>
+               <div class="form-group col-md-6 col-sm-12">
+                  <label>Project Description</label> 
+                  <input type="text" class="form-control" id="txtProjectDes2" placeholder="few lines about project">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="panel-group">
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <a data-toggle="collapse" href="#project3"><span class="glyphicon glyphicon-plus"> SECTION 3</span></a>
+         </div>
+         <div id="project3" class="panel-collapse collapse">
+            <div class="row panel-body">
+               <div class="form-group col-md-4 col-sm-12">
+                  <label>Prjoect Name</label>
+                  <input type="text" class="form-control" id="txtProjectName3" placeholder="To Do list">
+               </div>
+               <div class="form-group col-md-6 col-sm-12">
+                  <label>Prjoect Url</label>
+                  <input type="text" class="form-control" id="txtProjectUrl3" placeholder="https://www.github.io/todo/">
+               </div>
+               <div class="form-group col-md-6 col-sm-12">
+                  <label>Project Description</label>
+                  <input type="text" class="form-control" id="txtProjectDes3" placeholder="few lines about project">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</div>
+<br>
+
+<a class="btn btn-custom btnPrevious" onclick="">Prev</a>
+<a class="btn btn-custom btnNext" onclick="SaveData(event)">Next</a>
 </section>
 
 <section class="tab-pane container" id="other">
-   <h2 class="tab-heading">CERTIFICATIONS / TRANNINGS / ACHIEVEMENTS</h2>
-   <div class="container-fluid">
-      <div class="row" style="margin-bottom: 15px;">
-         <button class="btn btn-custom" type="button" onclick="addElm('cert-div')">Add New</button>
-         <button class="btn btn-custom" type="button" onclick="delElm('cert-div')">Delete</button>
-      </div>
-
-      <div class="row cert-div">
-         <div class="form-group col-md-6 col-sm-12	">
-            <label>1</label>
-            <input type="text" class="form-control" id="txtOther1">
-         </div>
-      </div>
-
+   <div class="alert shadow-soft mb-4 mb-lg-5" role="alert">
+    <span class="icon-lg"><span class="far fa-thumbs-up"></span></span>
+    <span><strong>Help Note</strong></span>
+    <br>
+    <ul>
+      <li>Kindly review before submiting the form.</li>
+       <li>After Submit you will be redirected to your resume URL.</li>
+       <li>After few seconds of submit your print will automatically pop , kindly select save as PDF with your desired name.</li>
+    </ul>
+ </div>
+ <h2 class="tab-heading">CERTIFICATIONS / TRANNINGS / ACHIEVEMENTS</h2>
+ <div class="container-fluid">
+   <div class="row" style="margin-bottom: 15px;">
+      <button class="btn btn-custom" type="button" onclick="addElm('cert-div')">Add New</button>
+      <button class="btn btn-custom" type="button" onclick="delElm('cert-div')">Delete</button>
    </div>
-   <br>
-   <a class="btn btn-custom btnPrevious" >Prev</a>
 
-   <div class="row" style="text-align: center;margin-bottom: 10px;">
-      <button class="btn btn-custom" onclick="SaveData(event)" id="saveDataId">Submit</button>
+   <div class="row cert-div">
+      <div class="form-group col-md-6 col-sm-12	">
+         <label>1</label><span class="mand-star"></span>
+         <input type="text" class="form-control" id="txtOther1" placeholder="Udemy certifications / Any projects achievements / trannings / Awards">
+      </div>
    </div>
+
+</div>
+<br>
+<a class="btn btn-custom btnPrevious" >Prev</a>
+
+<div class="row" style="text-align: center;margin-bottom: 10px;">
+   <button class="btn btn-custom" onclick="ValidateFormTab6(event);" id="saveDataId">Submit</button>
+</div>
 </section>
 
 </div>
