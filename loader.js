@@ -118,14 +118,18 @@ window.onload = function() {
 let userInputId1 = ['txtName', 'txtNumber', 'txtEmail', 'txtAddress', 'txthobby1', 'txthobby2', 'txthobby3']
 
 function ValidateFormTab1(e) {
+   var validate = true;
    for (i = 0; i < userInputId1.length; i++) {
       if (document.getElementById(userInputId1[i]).value == '') {
          alert('Kindly Fill all the star(*) marked mandatory field for Tab1');
+         validate = false;
          return false;
-      } else {
-         SaveData(e);
-         return true;
-      }
+      } 
+   }
+
+   if(validate == true){
+      SaveData(e);
+      return true;
    }
 }
 
@@ -142,14 +146,17 @@ function ValidateFormTab3(e) {
 let userInputId2 = ['txtCollegeName1', 'txtDegree1', 'txtStudy1', 'txtEdustartDate1', 'txtEduEndDate1']
 
 function ValidateFormTab4(e) {
+   var validate = true;
    for (i = 0; i < userInputId2.length; i++) {
       if (document.getElementById(userInputId2[i]).value == '') {
          alert('Kindly Fill all the star(*) marked mandatory field for Tab4');
+         validate = false;
          return false;
-      } else {
-         SaveData(e);
-         return true;
-      }
+      } 
+   }
+   if(validate == true){
+      SaveData(e);
+      return true;
    }
 }
 
