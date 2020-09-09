@@ -46,7 +46,7 @@ function onLoad(){
 
 	window.print();
 
-	setTimeout(window.close,5000);
+	window.close();
 }
 
 window.onload = function () { 
