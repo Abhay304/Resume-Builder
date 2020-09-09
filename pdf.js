@@ -1,5 +1,3 @@
-
-
 function onLoad(){
 
 	let htmlids = document.querySelectorAll('*[id]');
@@ -34,15 +32,25 @@ function onLoad(){
 		document.getElementById('txtEducationDate2').innerText = localStorage.getItem('txtEdustartDate2') + localStorage.getItem('txtEduEndDate2');
 	}
 
+	var inptArr=['txtProjectName1','txtProjectDes1','txtProjectUrl1','txtProjectName2','txtProjectDes2','txtProjectUrl2'
+	,'txtProjectName3','txtProjectDes3','txtProjectUrl3']
+
+	var returnArr = inptArr.filter(id =>{
+		return document.getElementById(id).innerText != "";
+	})
+
+	if(returnArr.length==0){
+		document.getElementById('projectSec').style.display="none";
+	}
+	// console.log(returnArr);
+
 	window.print();
 
-	// const element = document.getElementById('container');
-	// html2pdf().from(element).set({ html2canvas: { scale: 1 } }).save();
-
-
+	window.close();
 }
 
 window.onload = function () { 
 	setTimeout(onLoad, 2000);
 	// onLoad();
 }
+
