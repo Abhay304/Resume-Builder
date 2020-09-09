@@ -139,6 +139,11 @@ section{
 	background-color: #e6e7ee;
 }
 
+.nav-tabs>li>a{
+	pointer-events: none;
+	cursor: none;
+}
+
 .glyphicon-plus{
 	font-size: 2rem;
 	color: #ab2b2b;
@@ -153,6 +158,14 @@ section{
 	color: #ab2b2b !important;
 }
 /**/
+
+
+/*Pseudo element for mandatory star*/
+.mand-star::after{
+	content: " *";
+	color:red;
+}
+/*Pseudo element for mandatory star*/
 @media only screen and (max-width: 767px) {
 
 	header{
@@ -185,3 +198,10 @@ section{
 		border:none;
 	}
 }
+
+
+.shadow-soft {
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF !important;
+    color: #ab2b2b;
+}
+
