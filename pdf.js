@@ -45,7 +45,7 @@ function onLoad(){
 	// console.log(returnArr);
 
 	window.print();
-	history.back();
+	window.history.back();
 // 	window.close();
 	
 }
