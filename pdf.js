@@ -45,8 +45,9 @@ function onLoad(){
 	// console.log(returnArr);
 
 	window.print();
-
-	window.close();
+	history.back();
+// 	window.close();
+	
 }
 
 window.onload = function () { 
