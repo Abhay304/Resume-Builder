@@ -49,7 +49,7 @@ function onLoad(){
 
 window.onload = function () { 
 	setTimeout(onLoad, 2000);
-	setTimeout(closeWindow, 10000);
+	setTimeout(closeWindow, 20000);
 }
 
 
