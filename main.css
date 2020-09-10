@@ -184,7 +184,10 @@ section{
 		display: block;
 	}
 */
-
+	.logoblock{
+		padding: 2rem;
+	}
+	
 	.navblock {
 		flex-basis: 100%;
 	}
