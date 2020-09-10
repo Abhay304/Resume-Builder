@@ -77,7 +77,7 @@ function SaveData(e) {
 
    if (e.target.id == "saveDataId") {
 //       window.open('/Resume-Builder//pdf.html');
-      window.open('/Resume-Builder//pdf.html','_self');
+      window.open('/Resume-Builder//pdf.html','_blank');
    }
 }
 
