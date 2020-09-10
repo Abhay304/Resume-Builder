@@ -15,7 +15,6 @@ function onLoad(){
 		}	
 	}
 
-
 	if(localStorage.getItem('txtstartDate1') && localStorage.getItem('txtEndDate1')){
 		document.getElementById('txtWrkDate1').innerText = localStorage.getItem('txtstartDate1') +" - "+ localStorage.getItem('txtEndDate1');
 	}
@@ -42,18 +41,31 @@ function onLoad(){
 	if(returnArr.length==0){
 		document.getElementById('projectSec').style.display="none";
 	}
-	// console.log(returnArr);
-
+	
 	window.print();
+
 }
 
 window.onload = function () { 
+	let color = localStorage.getItem('color')
+	document.getElementById('txtName').style.color=color;
+	var h2Elements = document.getElementsByTagName("h2");
+	for(var i = 0; i < h2Elements.length; i++) {
+		h2Elements[i].style.color = color;
+	}
+
+	var classinfo = document.getElementsByTagName("a");
+	for(var i = 0; i < classinfo.length; i++) {
+		classinfo[i].style.color = color;
+	}
+
 	setTimeout(onLoad, 2000);
-	setTimeout(closeWindow, 20000);
+	setTimeout(closeWindow, 10000);
 }
 
 
 function closeWindow(){
-	window.close();
+	// window.close();
 }
+
 
