@@ -45,13 +45,15 @@ function onLoad(){
 	// console.log(returnArr);
 
 	window.print();
-	window.history.back();
-// 	window.close();
-	setTimeout(()=>{window.close();},12000)
 }
 
 window.onload = function () { 
 	setTimeout(onLoad, 2000);
-	// onLoad();
+	setTimeout(closeWindow, 10000);
+}
+
+
+function closeWindow(){
+	window.close();
 }
 
