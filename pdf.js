@@ -47,7 +47,7 @@ function onLoad(){
 	window.print();
 	window.history.back();
 // 	window.close();
-	setTimeout(()=>{window.close();},4000)
+	setTimeout(()=>{window.close();},8000)
 }
 
 window.onload = function () { 
