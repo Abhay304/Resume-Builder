@@ -76,8 +76,7 @@ function SaveData(e) {
    MoveNext();
 
    if (e.target.id == "saveDataId") {
-//       window.open('/Resume-Builder//pdf.html');
-      window.open('/Resume-Builder//pdf.html','_blank');
+      window.open('/Resume-Builder//pdf.html','_self');
    }
 }
 
@@ -174,7 +173,21 @@ function ValidateFormTab6(e) {
 
 // Validating forms end
 
+//Selecting Color
+document.getElementById('colorPicker').addEventListener('click',(e)=>{
+var colorids= ['mbg6','mbg7','mbg8','mbg9','default','grey6','grey7','grey8','grey9','grey10','blue6','blue7','blue8','blue9','blue10','yellow8','green12','green13','green14','green15','yellow10','mbg5'];
+   colorids.forEach(id =>{
+      document.getElementById(id).innerText=""
+   });
+   var id=e.target.id;
+   document.getElementById(id).innerText="Copied !";
 
+   let value = e.target.getAttribute('name');
+   localStorage.setItem('color', value);
+})
+
+
+// Selecting color end;
 
 // for Nav Bar toggle start
 $(document).ready(function() {
