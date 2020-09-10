@@ -62,10 +62,10 @@ body{
 	border-bottom:none;
 }
 
-.mbnav{
+/*.mbnav{
 	display: none;
 }
-
+*/
 
 .form-control , .form-control:focus {
 	border-radius: 0.55rem;
@@ -175,7 +175,7 @@ section{
 		height: auto;
 	}
 
-	.mbnav{
+/*	.mbnav{
 		display: block;
 		color: black;
 		cursor: pointer;
@@ -183,7 +183,7 @@ section{
 	.mbnav span{
 		display: block;
 	}
-
+*/
 
 	.navblock {
 		flex-basis: 100%;
