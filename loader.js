@@ -72,7 +72,7 @@ function SaveData(e) {
       }
    }
 
-   alert('DATA SAVED LOCALLY.');
+   alert('DATA SAVED');
    MoveNext();
 
    if (e.target.id == "saveDataId") {
