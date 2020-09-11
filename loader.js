@@ -28,7 +28,10 @@ class BuildResume {
    del(className) {
       let lastChild = document.querySelector('.' + className).lastElementChild;
       let parentDiv = document.querySelector('.' + className);
-      parentDiv.removeChild(lastChild);
+      if(document.querySelector('.' + className).childElementCount >1){
+         parentDiv.removeChild(lastChild);
+      }
+      
    }
 
 }
@@ -57,7 +60,6 @@ document.querySelector('.skill-div').addEventListener('click', (e) => {
 
 
 //For Saving Data
-
 function SaveData(e) {
 
    let htmlids = document.querySelectorAll('*[id]');
@@ -76,12 +78,11 @@ function SaveData(e) {
    MoveNext();
 
    if (e.target.id == "saveDataId") {
-      window.open('/Resume-Builder//pdf.html','_blank');
+      window.open('/Resume-Builder//pdf.html','_self');
    }
 }
 
 // Restore Data on Load start
-
 function onLoad() {
 
    for (i = 2; i < 12; i++) {
@@ -175,15 +176,19 @@ function ValidateFormTab6(e) {
 
 //Selecting Color
 document.getElementById('colorPicker').addEventListener('click',(e)=>{
-var colorids= ['mbg6','mbg7','mbg8','mbg9','default','grey6','grey7','grey8','grey9','grey10','blue6','blue7','blue8','blue9','blue10','yellow8','green12','green13','green14','green15','yellow10','mbg5'];
-   colorids.forEach(id =>{
+   if(e.target.tagName=="DIV"){
+
+    var colorids= ['mbg6','mbg7','mbg8','mbg9','default','grey6','grey7','grey8','grey9','grey10','blue6','blue7','blue8','blue9','blue10','yellow8','green12','green13','green14','green15','yellow10','mbg5'];
+    colorids.forEach(id =>{
       document.getElementById(id).innerText=""
    });
-   var id=e.target.id;
-   document.getElementById(id).innerText="Copied !";
+    var id=e.target.id;
+    document.getElementById(id).innerText="Copied !";
 
-   let value = e.target.getAttribute('name');
-   localStorage.setItem('color', value);
+    let value = e.target.getAttribute('name');
+    localStorage.setItem('color', value); 
+ }
+
 })
 
 
