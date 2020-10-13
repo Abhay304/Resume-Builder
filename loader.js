@@ -29,6 +29,8 @@ class BuildResume {
       let lastChild = document.querySelector('.' + className).lastElementChild;
       let parentDiv = document.querySelector('.' + className);
       if(document.querySelector('.' + className).childElementCount >1){
+         let count = parseInt(document.querySelector('.' + className).childElementCount);
+         localStorage.removeItem('txtOther'+count);
          parentDiv.removeChild(lastChild);
       }
       
