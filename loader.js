@@ -144,6 +144,7 @@ function ValidateFormTab3(e) {
    }
 }
 
+
 let userInputId2 = ['txtCollegeName1', 'txtDegree1', 'txtStudy1', 'txtEdustartDate1', 'txtEduEndDate1']
 
 function ValidateFormTab4(e) {
