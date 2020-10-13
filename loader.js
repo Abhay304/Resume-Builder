@@ -116,7 +116,7 @@ window.onload = function() {
 // Restore Data on Load end
 
 // Validating forms start
-let userInputId1 = ['txtName', 'txtNumber', 'txtEmail', 'txtAddress', 'txthobby1', 'txthobby2', 'txthobby3']
+let userInputId1 = ['txtName', 'txtNumber', 'txtEmail', 'txtAddress', 'txthobby1', 'txthobby2']
 
 function ValidateFormTab1(e) {
    var validate = true;
