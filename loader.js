@@ -55,6 +55,7 @@ document.querySelector('.skill-div').addEventListener('click', (e) => {
       let id = e.path[2].id;
       deltedDiv = document.getElementById(id);
       parentDiv.removeChild(deltedDiv);
+      localStorage.removeItem('txt'+id);
    }
 });
 
